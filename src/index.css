@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-charcoal bg-ivory antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+/* Subtle selection */
+::selection {
+  @apply bg-champagne/30 text-charcoal;
+}
+
+/* Dark theme overrides */
+.dark body {
+  @apply bg-charcoal-dark text-ivory;
+}
+.dark .bg-ivory {
+  @apply bg-charcoal;
+}
+.dark .text-charcoal {
+  @apply text-ivory;
+}
